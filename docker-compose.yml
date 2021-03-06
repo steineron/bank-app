@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: mysupersecretpassword
+    expose:
+      - 5432
+
+  app:
+    build: .
+    image: golang:alpine
+    command: go run -o app
