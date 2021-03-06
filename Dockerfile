@@ -8,8 +8,7 @@ FROM golang:alpine as builder
 # Set necessary environmet variables
 ENV GO111MODULE=on \
     CGO_ENABLED=0 \
-    GOOS=linux \
-    GOARCH=amd64
+    GOOS=linux
 
 LABEL tag="Example Banking App"
 
